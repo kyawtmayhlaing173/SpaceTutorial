@@ -1,17 +1,43 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+# Kotlin Multiplatform (KMP) - Ktor & SQLDelight Demo
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+[![Kotlin](https://img.shields.io/badge/kotlin-1.9.0-blue.svg?logo=kotlin)](http://kotlinlang.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+A Kotlin Multiplatform project implementing networking with Ktor and local caching with SQLDelight, following the [JetBrains official tutorial](https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatform-ktor-sqldelight.html).
 
-* `/shared` is for the code that will be shared between all targets in the project.
-  The most important subfolder is `commonMain`. If preferred, you can add code to the platform-specific folders here too.
+## 🚀 Quick Start
 
+### Prerequisites
+- Android Studio (with Kotlin plugin)
+- Xcode 15+ (for iOS build)
+- Java 17+
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+### Installation
+```
+git clone https://github.com/kyawtmayhlaing173/SpaceTutorial.git
+```
+
+### Run the Apps
+Android:
+
+```./gradlew :androidApp:assembleDebug```
+
+iOS:
+
+```
+Open iosApp/iosApp.xcodeproj in Xcode
+
+Select your simulator/device
+
+Click "Run"
+```
+
+### 💡 Key Features
+- Shared KMM Core: Business logic written once
+- Ktor Client: Multiplatform HTTP requests
+- SQLDelight: Cross-platform SQLite database
+- Dependency Injection: Koin (optional)
+
+### 🔗 Resources
+- [Official Kotlin Multiplatform Docs]("https://kotlinlang.org/docs/multiplatform.html")
+- [Kotlin Multiplatform Development]("https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatform-ktor-sqldelight.html")
